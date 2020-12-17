@@ -10,6 +10,8 @@ git clone https://github.com/mohitraghav773/spacex.git
 
 Run npm install for installing dependencies.
 
+If npm install give dependency error in project. Run npm audit fix and then run npm install.
+
 Run npm run dev:ssr for a dev server, You will be automatically navigated to http://localhost:4200/.
 
 The app will automatically reload if you change any of the source files.
