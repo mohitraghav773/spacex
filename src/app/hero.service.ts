@@ -22,15 +22,15 @@ export class CommonService {
     
   getCards(paraName, val){
     let queryString = (paraName === undefined ? this.cardUrl : this.cardUrl + "&" + paraName + '=' + val);
-    let getStoredUrl = localStorage.getItem('stringUrl');
+    /*let getStoredUrl = window.localStorage.getItem('stringUrl');
 
     if(getStoredUrl !== null && paraName !== undefined){
       let str = getStoredUrl.includes(paraName);      
       queryString = (str === true ? this.cardUrl + "&" + paraName + '=' + val : getStoredUrl + "&" + paraName + '=' + val)
-      localStorage.setItem('stringUrl', queryString);
+      window.localStorage.setItem('stringUrl', queryString);
     }else{
-      localStorage.setItem('stringUrl', queryString);
-    }    
+      window.localStorage.setItem('stringUrl', queryString);
+    } */   
 
     return this.http.get(queryString).pipe(
       tap(_ => this.log('fetched launch programe')),
