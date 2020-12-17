@@ -1,0 +1,20 @@
+
+<app-filter (cardData)="fetchData($event)"></app-filter>
+
+<div class="card-wrapper">
+  <div class="col-md-12 " *ngFor="let card of cardData">
+    <div class="card">
+      <div class="card-img">
+        <img src="{{card.links.mission_patch}}" >
+      </div>
+      <div class="card-desc">
+        <h3 class="card-head">{{card.mission_name}} <span>#{{card.flight_number}}</span></h3>
+        <p><label>Mission Ids:</label> <span>{{card.mission_id}}</span></p>
+        <p><label>Launch Year:</label> <span>{{card.launch_year}}</span></p>
+        <p><label>Successful Launch:</label> <span>{{card.launch_success}}</span></p>
+        <p><label>Successful Landing:</label> <span>{{card.rocket.first_stage.cores[0].land_success}}</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+

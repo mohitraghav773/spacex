@@ -1,0 +1,38 @@
+span{
+    color: #8fbbff;
+}
+
+.card-img{
+    width: auto;
+    padding: 20px;
+    background-color: #ededed;
+}
+
+.card-desc{
+    padding-top: 15px;
+    min-height: 170px;
+}
+.card-head{
+    margin-bottom: 10px;
+}
+.card-desc p{
+    padding: 5px 0;
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px) { 
+    .card-wrapper{
+        width: calc(100% -260px);
+    }
+     .card-wrapper .col-md-12{
+         width: 33.3%;
+     }
+}
+
+
+@media only screen and (min-width: 1441px) {
+    .card-wrapper{
+        width: calc(100% -260px);
+    }
+     .card-wrapper .col-md-12{
+         width: 33.3%;
+     } 
+}
