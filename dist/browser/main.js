@@ -567,15 +567,15 @@ class CommonService {
     }
     getCards(paraName, val) {
         let queryString = (paraName === undefined ? this.cardUrl : this.cardUrl + "&" + paraName + '=' + val);
-        /*let getStoredUrl = window.localStorage.getItem('stringUrl');
-    
-        if(getStoredUrl !== null && paraName !== undefined){
-          let str = getStoredUrl.includes(paraName);
-          queryString = (str === true ? this.cardUrl + "&" + paraName + '=' + val : getStoredUrl + "&" + paraName + '=' + val)
-          window.localStorage.setItem('stringUrl', queryString);
-        }else{
-          window.localStorage.setItem('stringUrl', queryString);
-        } */
+        let getStoredUrl = window.localStorage.getItem('stringUrl');
+        if (getStoredUrl !== null && paraName !== undefined) {
+            let str = getStoredUrl.includes(paraName);
+            queryString = (str === true ? this.cardUrl + "&" + paraName + '=' + val : getStoredUrl + "&" + paraName + '=' + val);
+            window.localStorage.setItem('stringUrl', queryString);
+        }
+        else {
+            window.localStorage.setItem('stringUrl', queryString);
+        }
         return this.http.get(queryString).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(_ => this.log('fetched launch programe')), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(this.handleError('updateSpaceX')));
     }
     handleError(operation = 'operation', result) {

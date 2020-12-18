@@ -17,7 +17,7 @@ export class FilterComponent implements OnInit {
   }
 
   getFilters(paraName?, val?): void {
-    // if need to show the allied filter on use filterList
+    // if need to show the applied filter -- use filterList
     paraName? this.filterList.push({paraName: val}) : null;
     
     this.commonService.getCards(paraName, val).subscribe((data) => {
