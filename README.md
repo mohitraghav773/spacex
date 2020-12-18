@@ -29,5 +29,3 @@ Run ng test to execute the unit tests via Karma.
 ### Lighthouse test result
 
 ![](https://github.com/mohitraghav773/spacex/blob/main/src/images/lighthouse-1.png)
-
-![](https://github.com/mohitraghav773/spacex/blob/main/src/images/lighthouse-1.png)
