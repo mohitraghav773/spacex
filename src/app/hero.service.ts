@@ -22,7 +22,7 @@ export class CommonService {
     
   getCards(paraName, val){
     let queryString = (paraName === undefined ? this.cardUrl : this.cardUrl + "&" + paraName + '=' + val);
-    /*let getStoredUrl = window.localStorage.getItem('stringUrl');
+    let getStoredUrl = window.localStorage.getItem('stringUrl');
 
     if(getStoredUrl !== null && paraName !== undefined){
       let str = getStoredUrl.includes(paraName);      
@@ -30,7 +30,7 @@ export class CommonService {
       window.localStorage.setItem('stringUrl', queryString);
     }else{
       window.localStorage.setItem('stringUrl', queryString);
-    } */   
+    }    
 
     return this.http.get(queryString).pipe(
       tap(_ => this.log('fetched launch programe')),
