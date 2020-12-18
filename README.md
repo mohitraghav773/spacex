@@ -25,3 +25,7 @@ Use the npm run build:ssr --prod flag for a production build.
 ### Running unit tests
 
 Run ng test to execute the unit tests via Karma.
+
+### Lighthouse test result
+
+![](images/)
