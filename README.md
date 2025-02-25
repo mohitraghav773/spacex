@@ -1,5 +1,7 @@
 # SpaceX Launch Programs
 
+Configures spaceX open api to create UI in angular and showcasing all the lauches does by spaceX programme
+
 ### Project set up
 
 Clone the project in local directory
